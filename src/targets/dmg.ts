@@ -150,7 +150,7 @@ export class DmgTarget extends TargetEx {
       await exec("sync")
     })
 
-    const artifactPath = path.join(appOutDir, `${appInfo.productFilename}-${appInfo.version}.dmg`)
+    const artifactPath = path.join(appOutDir, `${appInfo.productName}.dmg`)
     //noinspection SpellCheckingInspection
     await spawn("hdiutil", addVerboseIfNeed(["convert", tempDmg, "-format", packager.devMetadata.build.compression === "store" ? "UDRO" : "UDBZ", "-imagekey", "zlib-level=9", "-o", artifactPath]))
     await exec("hdiutil", addVerboseIfNeed(["internet-enable", "-no"]).concat(artifactPath))

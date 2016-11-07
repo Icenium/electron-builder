@@ -127,6 +127,7 @@ async function pack(options: SquirrelOptions, directory: string, updateFile: str
     <iconUrl>${options.iconUrl}</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>${options.description}</description>
+    <releaseNotes>${options.releaseNotes}</releaseNotes>
     <copyright>${copyright}</copyright>${options.extraMetadataSpecs || ""}
   </metadata>
 </package>`

@@ -27,9 +27,9 @@ export default class SquirrelWindowsTarget extends TargetEx {
     const appInfo = this.packager.appInfo
     const version = appInfo.version
     const archSuffix = getArchSuffix(arch)
-    const setupFileName = `${appInfo.productFilename} Setup ${version}${archSuffix}.exe`
+    const setupFileName = `${appInfo.productName}Setup.exe`
 
-    const installerOutDir = path.join(appOutDir, "..", `win${getArchSuffix(arch)}`)
+    const installerOutDir = path.join(appOutDir, "..", `win`)
 
     const distOptions = await this.computeEffectiveDistOptions()
 
