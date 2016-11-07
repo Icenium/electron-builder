@@ -47,6 +47,7 @@ export interface SquirrelOptions {
   authors?: string
   extraMetadataSpecs?: string
   copyright?: string
+  releaseNotes?: string
 }
 
 export async function buildInstaller(options: SquirrelOptions, outputDirectory: string, setupExe: string, packager: WinPackager, appOutDir: string) {
